@@ -71,3 +71,7 @@ git rebase top_N
 Answer: git checkout test would allow you to navigate to a branch called test. Now that you are at test, 
 git rebase top_ten command should rebase the changes from the top_ten branch into the current branch, which is test.
 git rebase top_N command should rebase the changes from the top_N branch into the current branch, which is also test.
+There is a merge conflict that I would resolve, because essentially the test branch would not know which changes are the correct
+changes to make. For example, in the process_movie_data.py file, top_ten would call the top ten movies, and top_N would call
+the top N movies. Therefore, because the test branch has the original call top 5 movies, it would not know which one to
+switch to. After resolving the merge conflict, then we can continue the rebase and everything works out as intended.
